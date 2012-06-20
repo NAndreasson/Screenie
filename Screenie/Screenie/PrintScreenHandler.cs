@@ -8,17 +8,11 @@ using System.Windows.Forms;
 
 namespace Screenie 
 {
-    class ScreenHandler 
+    class PrintScreenHandler 
     {
-        public static Bitmap GetScreen(Point upperLeftPoint, Point lowerRightPoint) {
-            Size sectionSize = GetSectionSize(upperLeftPoint, lowerRightPoint);
-            return CopyScreenSection(upperLeftPoint, sectionSize);
-        }
-
-        private static Size GetSectionSize(Point upperLeftPoint, Point lowerRightPoint) {
-            int sectionWidth = lowerRightPoint.X - upperLeftPoint.X;
-            int sectionHeight = lowerRightPoint.Y - upperLeftPoint.Y;
-            return new Size(sectionWidth, sectionHeight);
+        public static Bitmap GetScreenSection(Rectangle area)
+        {
+            return CopyScreenSection(area.Location, area.Size);           
         }
 
         private static Bitmap CopyScreenSection(Point upperLeftPoint, Size sectionSize) {
@@ -27,5 +21,9 @@ namespace Screenie
             screenGraphics.CopyFromScreen(upperLeftPoint.X, upperLeftPoint.Y, 0, 0, screenPrint.Size);
             return screenPrint;
         }
+
+
+
+
     }
 }

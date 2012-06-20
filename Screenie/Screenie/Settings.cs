@@ -10,7 +10,7 @@ namespace Screenie
 {
     [DataContract]
     public class Settings {
-        [DataMember]
+        [DataMember(Name="ImageFormat")]
         public ImageFormat FileFormat { get; set; }
         [DataMember]
         public string SavePath { get; set; }

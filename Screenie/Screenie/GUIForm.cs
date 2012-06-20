@@ -13,6 +13,7 @@ namespace Screenie
     {
         private Settings _settings;
 
+
         public ScreenieForm()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Screenie
 
         private void ScreenieForm_Load(object sender, EventArgs e)
         {
+            //abc.Visible = true;
             // if xml file exists load it
             try
             {
@@ -32,11 +34,7 @@ namespace Screenie
                 Console.WriteLine(er.InnerException.Message);
                 Console.WriteLine(er.InnerException.InnerException.Message);
             }
-            Screenie abc = new Screenie(_settings);
-
-            //FtpUploader ftpUploader = new FtpUploader(new UserCredentials("144019_master", "Dezy54gh."), @"ftp://ftp.nandreasson.se/nandreasson.se/public_html/");
-            //ftpUploader.UploadFile(@"minFil.txt");
-            //abc.printScreen(new Point(0, 0), new Point(3, 2));
+            Screenie settings = new Screenie(_settings);
         }
 
         private void SetGuiSettings()
