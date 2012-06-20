@@ -7,6 +7,6 @@ namespace Screenie
 {
     interface FileUploader
     {
-        //public void uploadFile();
+        void UploadFile(string filePath);
     }
 }

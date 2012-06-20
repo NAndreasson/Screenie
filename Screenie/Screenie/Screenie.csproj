@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,20 +45,26 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsHookLib">
+      <HintPath>..\Windows Hook Library\WindowsHookLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileUploader.cs" />
+    <Compile Include="FtpUploader.cs" />
     <Compile Include="GUIForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIForm.Designer.cs">
       <DependentUpon>GUIForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageFormat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenHandler.cs" />
     <Compile Include="Screenie.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="UserCredentials.cs" />
     <EmbeddedResource Include="GUIForm.resx">
       <DependentUpon>GUIForm.cs</DependentUpon>
     </EmbeddedResource>
