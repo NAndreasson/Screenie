@@ -15,6 +15,10 @@ namespace Screenie
             keys.Add(key);
         }
 
+
+        // do we need to check ctrl and such manually?
+        // or can we get it with keycode or modifiers..
+
         public bool KeysPressed()
         {
             foreach (Keys key in keys) {

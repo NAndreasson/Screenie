@@ -21,9 +21,5 @@ namespace Screenie
             screenGraphics.CopyFromScreen(upperLeftPoint.X, upperLeftPoint.Y, 0, 0, screenPrint.Size);
             return screenPrint;
         }
-
-
-
-
     }
 }

@@ -11,6 +11,10 @@ namespace Screenie
 {
     public partial class ScreenieForm : Form
     {
+
+        private KeyGroup _printAreaKeyGroup = new KeyGroup();
+        private KeyGroup _printScreenKeyGroup = new KeyGroup();
+
         private Settings _settings;
 
 
@@ -45,6 +49,7 @@ namespace Screenie
             passwordTextBox.Text = _settings.Password;
         }
 
+        #region 'Form events'
         private void ScreenieForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // write all fields to an xml file
@@ -82,6 +87,8 @@ namespace Screenie
             DialogResult dialogResult = folderBrowserDialog.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
+                string folderPath = folderBrowserDialog.SelectedPath;
+                Console.WriteLine(folderPath);
                 // get the path and set to settings file
             }
         }
@@ -101,5 +108,37 @@ namespace Screenie
                 passwordTextBox.Enabled = false;
             }
         }
+
+        private void printAreaButtonTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (printScreenTextBox.Text.Length == 1)
+            {
+                string key = printScreenTextBox.Text.ToUpper();
+                Console.WriteLine(key);
+                KeysConverter keysConverter = new KeysConverter();
+                _printAreaKeyGroup.AddKey((Keys)keysConverter.ConvertFromString(key));
+               
+            }
+        }
+
+        private void printScreenSectionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printScreenComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (printScreenComboBox.Text) {
+                case "Ctrl":
+                    Console.WriteLine("tja");
+                    break;
+                case "Alt":
+                    break;
+                case "Shift":
+                    break;
+            }
+                
+        }
     }
+        #endregion
 }

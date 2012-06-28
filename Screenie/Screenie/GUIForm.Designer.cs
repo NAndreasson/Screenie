@@ -42,6 +42,12 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.ftpAddressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.printScreenTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.printScreenComboBox = new System.Windows.Forms.ComboBox();
+            this.printScreenSectionComboBox = new System.Windows.Forms.ComboBox();
+            this.printScreenSectionTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -152,11 +158,77 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Example: ftp://examplepage.com/folder/";
             // 
+            // printScreenTextBox
+            // 
+            this.printScreenTextBox.Location = new System.Drawing.Point(147, 330);
+            this.printScreenTextBox.MaxLength = 1;
+            this.printScreenTextBox.Name = "printScreenTextBox";
+            this.printScreenTextBox.Size = new System.Drawing.Size(100, 20);
+            this.printScreenTextBox.TabIndex = 10;
+            this.printScreenTextBox.TextChanged += new System.EventHandler(this.printAreaButtonTextBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 301);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Printscreen";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 374);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Printscreen section";
+            // 
+            // printScreenComboBox
+            // 
+            this.printScreenComboBox.FormattingEnabled = true;
+            this.printScreenComboBox.Items.AddRange(new object[] {
+            "None",
+            "Ctrl",
+            "Alt",
+            "Shift",
+            "PrtScn"});
+            this.printScreenComboBox.Location = new System.Drawing.Point(19, 328);
+            this.printScreenComboBox.Name = "printScreenComboBox";
+            this.printScreenComboBox.Size = new System.Drawing.Size(94, 21);
+            this.printScreenComboBox.TabIndex = 13;
+            this.printScreenComboBox.Text = "None";
+            this.printScreenComboBox.SelectedIndexChanged += new System.EventHandler(this.printScreenComboBox_SelectedIndexChanged);
+            // 
+            // printScreenSectionComboBox
+            // 
+            this.printScreenSectionComboBox.FormattingEnabled = true;
+            this.printScreenSectionComboBox.Location = new System.Drawing.Point(19, 405);
+            this.printScreenSectionComboBox.Name = "printScreenSectionComboBox";
+            this.printScreenSectionComboBox.Size = new System.Drawing.Size(94, 21);
+            this.printScreenSectionComboBox.TabIndex = 14;
+            // 
+            // printScreenSectionTextBox
+            // 
+            this.printScreenSectionTextBox.Location = new System.Drawing.Point(147, 406);
+            this.printScreenSectionTextBox.MaxLength = 1;
+            this.printScreenSectionTextBox.Name = "printScreenSectionTextBox";
+            this.printScreenSectionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.printScreenSectionTextBox.TabIndex = 15;
+            this.printScreenSectionTextBox.TextChanged += new System.EventHandler(this.printScreenSectionTextBox_TextChanged);
+            // 
             // ScreenieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 352);
+            this.ClientSize = new System.Drawing.Size(372, 524);
+            this.Controls.Add(this.printScreenSectionTextBox);
+            this.Controls.Add(this.printScreenSectionComboBox);
+            this.Controls.Add(this.printScreenComboBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.printScreenTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ftpAddressTextBox);
             this.Controls.Add(this.usernameTextBox);
@@ -191,6 +263,12 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox ftpAddressTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox printScreenTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox printScreenComboBox;
+        private System.Windows.Forms.ComboBox printScreenSectionComboBox;
+        private System.Windows.Forms.TextBox printScreenSectionTextBox;
 
 
     }

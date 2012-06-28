@@ -34,9 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(0, 0);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AreaForm";
+            this.Opacity = 0.3D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AreaForm";
             this.Load += new System.EventHandler(this.AreaForm_Load);
