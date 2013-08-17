@@ -1,10 +1,14 @@
 Screenie
 =========================
 
-Screenie is an application that will run in the background and wait for user input... To be continued
+This is on hold for an unforeseeable future.
 
-**Not finished**
+Idea
+-----------
+
+The idea for this project was to build an application which makes it quite easy to capture screenshots and share it with friends.
+
 
 Project goals
------
+---------
 * Learning C#
